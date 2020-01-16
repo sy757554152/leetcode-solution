@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>code 14 最长公共前缀</title>
+</head>
+<body>
+    <!-- code 14 最长公共前缀
+        <script>
+            var strs=["dog","racecar","car"]
+            var longestCommonPrefix = function(strs) {
+                var flag=true,str="";
+                for(var i=0;i<strs[0].length&&flag;){
+                    for(var j=1;j<strs.length;j++){
+                        if(strs[0][i]!=strs[j][i]){
+                            flag=false;
+                            break;
+                        }
+                    }
+                    if(flag){
+                        str=str+strs[0][i];
+                        i++;
+                    }else{
+                        return str;
+                    }
+                }
+            };
+            console.log(longestCommonPrefix(strs));
+        </script>
+        <script>
+            var longestCommonPrefix = function(strs) {
+                if(strs.length == 0) 
+                    return "";
+                let ans = strs[0];
+                for(let i =1;i<strs.length;i++) {
+                    let j=0;
+                    for(;j<ans.length && j < strs[i].length;j++) {
+                        if(ans[j] != strs[i][j])
+                            break;
+                    }
+                    ans = ans.substr(0, j);
+                    if(ans === "")
+                        return ans;
+                }
+                return ans;
+            };
+        </script>
+     -->
+</body>
+</html>
