@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>code 8 回文数</title>
+</head>
+<body>
+    <!-- code 8  回文数
+        <script>
+            var x=10;
+            var isPalindrome = function(x) {
+                if(x<0){
+                    return false;
+                }
+                var str=x.toString();
+                var str1="",str2="";
+                if(str.length%2==0){
+                    str1=str.slice(0,str.length/2)*1;
+                    str2=str.slice(str.length/2).split("").reverse().join("")*1;
+                    return str1==str2?true:false;
+                }else{
+                    str1=str.slice(0,(str.length-1)/2)*1;
+                    str2=str.slice((str.length+1)/2).split("").reverse().join("")*1;
+                    return str1==str2?true:false;
+                }
+            };
+            console.log(isPalindrome(x));
+        </script> 
+    -->
+    <!--  
+        <script>
+            var x=121;
+            var isPalindrome = function(x) {
+                if (x >= 0 && x < 10) return true
+                else if (x < 0 || x % 10 === 0) return false
+                let num = 0
+                while (x > num) {
+                    num = num * 10 + x % 10
+                    x = x > num ? Math.floor(x / 10) : x
+                }
+                return x === num;
+            };
+            console.log(isPalindrome(x));
+        </script> 
+    -->
+</body>
+</html>

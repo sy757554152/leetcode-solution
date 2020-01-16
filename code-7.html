@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>code　7 整数翻转</title>
+</head>
+<body>
+    <!-- code：7 整数反转 
+        //网上
+        <script>
+            var reverse = function (x) {
+                let overflow = function (x) {
+                    return (x >= Math.pow(2, 31) - 1 || x <= -Math.pow(2, 31)) ? 0 : x
+                }
+                x = overflow(x)
+
+                let isNegative = x < 0
+                if (isNegative) {
+                    x = -x
+                }
+                let a = 0
+                while (x > 9) {
+                    a = a * 10 + x % 10 * 10
+                    x = parseInt(x / 10)
+                }
+                a += x
+
+                return isNegative ? overflow(-a) : overflow(a)
+            };
+        </script>
+
+        //我的
+        <script>
+        var x=1534236469;
+        var reverse = function(x) {
+            var max=Math.pow(2,31);
+            
+            var str=x.toString();
+            var arr=str.split("");
+            var p="";
+            if(arr[0]=='-'){
+                p=arr.shift();
+            }
+            var arr1=arr.reverse();
+            str="";
+            arr1.forEach((item,index)=>{
+                str=str.concat(item.toString());
+            })
+            var num=str*1;
+            if(x>(max-1)||x<(-max)||num>(max-1)||num<(-max)){
+                return 0;
+            }
+            return p?-num:num;
+        };
+        console.log(reverse(x));
+    </script> -->
+</body>
+</html>

@@ -9,33 +9,7 @@
 </head>
 
 <body>
-    <!--code 1   两数之和   方法1 暴力算法   方法2 hash
-        <script>
-            var nums = [2, 7, 11, 15];
-            var target = 13;
-            var twoSum = function (nums, target) {
-                var result = new Map();
-                var len = nums.length;
-                var diff = 0;
-                var out = [];
-                for (var i = 0; i < len; i++) {
-                    // 每次都是target-nums[i]  重置diff来查找hash表中的键值
-                    diff = target - nums[i];
-                    // diffVal 获取对应的index
-                    var diffVal = result.get(diff);
-                    if (result.has(diff) && diffVal != i) {
-                        out.push(i);
-                        out.push(diffVal);
-                        return out;
-                    } else {
-                        // 在map中存储对应的键值数据
-                        result.set(nums[i], i);
-                    }
-                }
-            }
-            console.log(twoSum(nums, target));
-        </script> 
-    -->
+    
 </body>
 
 </html>
